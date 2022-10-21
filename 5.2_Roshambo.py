@@ -1,3 +1,4 @@
+import random
 '''
 ROSHAMBO PROGRAM
 ----------------
@@ -11,12 +12,47 @@ Each round tell me what the computer chose, what I chose and also if I won, lost
 When the user quits print an end game message and their win/loss/tie record
 
 '''
-
-
-
-
-
-
+done = False
+tie = 0
+win = 0
+lose = 0
+while not done:
+    player = int(input("Enter your move here: "))
+    ai = random.randint(1,3)
+    if player==1 and ai==1:
+        print("It's a tie! Both you and the computer chose Rock!")
+        tie += 1
+    elif player==2 and ai==2:
+        print("It's a tie! Both you and the computer chose Paper!")
+        tie += 1
+    elif player==3 and ai==3:
+        print("It's a tie! Both you and the computer chose Scissors!")
+        tie += 1
+    elif player==1 and ai==2:
+        print("You lost! The computer chose Paper and you chose Rock!")
+        lose += 1
+    elif player==1 and ai==3:
+        print("You won! The computer chose Scissors and you chose Rock!")
+        win += 1
+    elif player==2 and ai==1:
+        print("You won! The computer chose Rock and you chose Paper!")
+        win += 1
+    elif player==2 and ai==3:
+        print("You lost! The computer chose Scissors and you chose Paper!")
+        lose += 1
+    elif player==3 and ai==1:
+        print("You lost! The computer chose Rock and you chose Scissors!")
+        lose += 1
+    elif player==3 and ai==2:
+        print("You won! The computer chose Paper and you chose Scissors!")
+        win += 1
+    if player==4:
+        score = input("Before you quit, do you want to see your score? ")
+        if score.lower()=="yes" or score.lower()=="y":
+            print("You won",win,"games, lost",lose,"games, and tied",tie,"games.")
+            done = True
+        else:
+            done = True
 
 
 
