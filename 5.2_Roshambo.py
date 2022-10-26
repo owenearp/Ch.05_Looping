@@ -12,6 +12,7 @@ Each round tell me what the computer chose, what I chose and also if I won, lost
 When the user quits print an end game message and their win/loss/tie record
 
 '''
+import math
 done = False
 tie = 0
 win = 0

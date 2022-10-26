@@ -4,11 +4,11 @@ import random
  1. Make the following program work.
    '''
 # print("This program takes three numbers and returns the sum.")
-# num1 = int(input("Enter a number: "))
-# num2 = int(input("Enter a number: "))
-# num3 = int(input("Enter a number: "))
-# total = num1 + num2 + num3
-# print("Your total is:",total)
+# total = 0
+# for i in range(3):
+#     x = int(input("Enter a number: "))
+#     total = total + x
+# print("The total is:",total)
 
 
 '''
@@ -55,60 +55,20 @@ import random
      if statements.
       
 '''
+sum = 0
 pos = 0
 neg = 0
 zero = 0
-num1 = int(input("Enter a number: "))
-num2 = int(input("Enter a number: "))
-num3 = int(input("Enter a number: "))
-num4 = int(input("Enter a number: "))
-num5 = int(input("Enter a number: "))
-num6 = int(input("Enter a number: "))
-num7 = int(input("Enter a number: "))
-total = num1 + num2 + num3 + num4 + num5 + num6 +num7
-print("The total of these numbers is",total)
-if num1>0:
-    pos += 1
-elif num1<0:
-    neg += 1
-else:
-    zero += 1
-if num2>0:
-    pos += 1
-elif num2<0:
-    neg += 1
-else:
-    zero += 1
-if num3>0:
-    pos += 1
-elif num3<0:
-    neg += 1
-else:
-    zero += 1
-if num4>0:
-    pos += 1
-elif num4<0:
-    neg += 1
-else:
-    zero += 1
-if num5>0:
-    pos += 1
-elif num5<0:
-    neg += 1
-else:
-    zero += 1
-if num6>0:
-    pos += 1
-elif num6<0:
-    neg += 1
-else:
-    zero += 1
-if num7>0:
-    pos += 1
-elif num7<0:
-    neg += 1
-else:
-    zero += 1
-print("There are",pos,"positive numbers.")
-print("There are",neg,"negative numbers.")
-print(zero,"of the numbers are zero.")
+for i in range(7):
+    num = int(input("Type a number: "))
+    sum += num
+    if num < 0:
+        neg += 1
+    elif num > 0:
+        pos += 1
+    else:
+        zero += 1
+print("The sum of the numbers is",sum)
+print("There were",pos,"positive numbers.")
+print("There were",neg,"negative numbers.")
+print("There were",zero,"zeros.")
